@@ -24,5 +24,26 @@
 			<button type="submit">회원가입</button>
 		</form>
 	</section>
+	
+	<script>
+	$("#dupId").click(checkDupId);
+	function checkDupId(){
+		$.ajax({
+			url:"<%=request.getContextPath()%>/dupid.lo"
+			, type: "post"
+			, async:false
+			, data: {id: $("input").first().val()}
+			, success: function(result){
+				console.log(result);
+				if(result == 1){
+					$("input").first().next().next();
+				}
+			}
+			, error: function(request, status, error){
+				alert(request.status);
+			}
+		});
+	}
+	</script>
 </body>
 </html>

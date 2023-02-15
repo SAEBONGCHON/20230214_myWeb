@@ -7,7 +7,7 @@ package kh.member.model.vo;
  *	0. 첫화면("/") -index.jsp include header.jsp - 로그인(login Get)/로그아웃(logout Get) 버튼 토글
  *	 , nav 내정보보기(myinfo get)버튼
  *	로그인 화면 - 로그인(login post) 버튼 / 회원가입(enroll get) 버튼
- *	1. 회원가입("/enroll") - get enroll.jsp , post 회원가입 DB다녀와서 ("/")이동
+ *	1. 회원가입("/enroll") - get enroll.jsp , post 회원가입 DB다녀와서 ("/")이동, id 중복확인
  *	회원가입화면 - 회원가입 (/enroll post) 버튼 
  *	2. 로그인 ("/login") - Get login.jsp , post 로그인화면DB다녀와서
  *   , session("lgnss")등록(이름, email, id) ("/")이동
