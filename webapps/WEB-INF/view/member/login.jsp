@@ -11,6 +11,8 @@
 <body>
 	<jsp:include page="/WEB-INF/view/header.jsp"/>
 	<section>
+		<!--    private String id;
+		   		private String passwd; -->
 		<form action="login" method="post">
 			id:<input type="text" name="id"> 
 			<br>

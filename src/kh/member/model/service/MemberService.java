@@ -15,7 +15,6 @@ public class MemberService {
 		close(conn);
 		return result;
 	}
-	
 	//회원가입이니까 insert
 		public int enroll(MemberVo vo) {
 			int result = -1;

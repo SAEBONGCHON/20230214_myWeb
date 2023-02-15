@@ -11,8 +11,8 @@ public class MemberDao {
 	// login
 	public MemberVo login(Connection conn, MemberVo vo) {
 		MemberVo result = null;
-		String sql = "SELECT ID, NAME, EMAIL from TEST_MEMBER";
-		sql += "WHERE ID=? and PASSWD=?";
+		String sql = "select ID, NAME, EMAIL from test_member "
+				+ "where id=? and passwd=?";
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
@@ -26,7 +26,6 @@ public class MemberDao {
 				result.setId(rs.getString("id"));
 				result.setName(rs.getString("name"));
 			}
-			
 		} catch (Exception e) {
 			e.printStackTrace();
 		}finally {
@@ -34,9 +33,13 @@ public class MemberDao {
 			close(pstmt);
 		}
 		
-		System.out.println(result);
+		
 		return result;
 	}
+	
+	
+	
+	
 	
 	//회원가입이니까 insert
 	public int enroll(Connection conn, MemberVo vo) {
