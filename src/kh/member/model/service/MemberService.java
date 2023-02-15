@@ -7,6 +7,21 @@ import kh.member.model.dao.MemberDao;
 import kh.member.model.vo.MemberVo;
 
 public class MemberService {
+	//아이디중복확인
+	public int dupIdChk(String id) {
+		Connection conn = getConnection();
+		int result = new MemberDao().dupIdChk(conn, id);
+		return result;
+	}
+	
+	//마이인포
+	public MemberVo myInfo(String id) {
+		MemberVo result = null;
+		Connection conn = getConnection();
+		result = new MemberDao().myInfo(conn, id);
+		close(conn);
+		return result;
+	}
 	//로그인
 	public MemberVo login(MemberVo vo) {
 		MemberVo result = null;

@@ -48,9 +48,11 @@ public class LoginController extends HttpServlet {
 			MemberVo result = new MemberService().login(vo);
 			if(result != null) {
 				System.out.println("로그인 성공");
+			request.getSession().setAttribute("lgnss", result);
 			} else {
 				System.out.println("로그인 실패");				
 			}
+			response.sendRedirect(request.getContextPath()+"/");
 			//3.
 	}
 	
