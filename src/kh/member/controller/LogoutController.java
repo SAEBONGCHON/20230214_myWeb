@@ -29,5 +29,4 @@ public class LogoutController extends HttpServlet {
 		response.sendRedirect(request.getContextPath()+"/");
 	}
 
-
 }

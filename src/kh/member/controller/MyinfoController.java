@@ -50,7 +50,7 @@ public class MyinfoController extends HttpServlet {
 			//request.getRequestDispatcher("/WEB-INF/view/member/myinfo.jsp").forward(request, response);			
 			
 			// 방법 2 : 로그인 정보가 없을 때, 하나의 error page를 만들어 줌
-			request.setAttribute("errorMsg", "에러에러~!~   !");
+			request.setAttribute("errorMsg", "에러에러~!~로그인되지 않았습니다.   !");
 			request.getRequestDispatcher("/WEB-INF/view/error/errorLogin.jsp").forward(request, response);
 			
 		}

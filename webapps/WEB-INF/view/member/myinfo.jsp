@@ -21,9 +21,7 @@
 				name : ${myinfo.name }
 				<br>
 				name : ${myinfo.email }
-				<br>
-				<h4>로그인 되지 않았습니다. 정보가 없습니다.</h4>
-				<a href="<%=request.getContextPath()%>/login">로그인페이지이동</a>	
+				<br>	
 			</div>
 		</c:if>
 		<hr>
@@ -40,6 +38,7 @@
 		</c:if>
 <hr>
 <h4>JSP request attribute</h4>
+
 
 
 <%
