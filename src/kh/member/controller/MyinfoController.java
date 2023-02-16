@@ -28,16 +28,19 @@ public class MyinfoController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		//1.인덱스제이에스피에서 컨트롤러로 올당시에 들고 들어온 쿼리스트링이 아무것도 없어서 읽을게 없음
-		//2.DB에 갔다와야하는데, 내 아이디에 해당하는 정보를 디비에서 읽어와ㅏ야한다.
+		//1.인덱스제이에스피에서 컨트롤러로 올당시에 들고 들어온 쿼리스트링이 아무것도 없어서 읽을게 없어서 겟파라미터 없음
 		String id = null;
 		if(request.getSession().getAttribute("lgnss") != null) {
 			id = ((MemberVo)(request.getSession().getAttribute("lgnss"))).getId();			
 		}
+		//2.DB에 갔다와야하는데, 내 아이디에 해당하는 정보를 디비에서 읽어와ㅏ야한다.
 		if(id != null) {
 			request.setAttribute("myinfo", new MemberService().myInfo(id));			
-		} 
-			request.getRequestDispatcher("/WEB-INF/view/member/myinfo.jsp").forward(request, response);			
+		} else {
+			
+		}
+		
+		request.getRequestDispatcher("/WEB-INF/view/member/myinfo.jsp").forward(request, response);			
 		
 	}
 

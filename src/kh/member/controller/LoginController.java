@@ -40,7 +40,6 @@ public class LoginController extends HttpServlet {
 			MemberVo vo = new MemberVo();
 			vo.setId(request.getParameter("id"));
 			vo.setPasswd(request.getParameter("passwd"));
-			
 //			String id = request.getParameter("id");
 //			String passwd = request.getParameter("pssswd");
 			
@@ -48,12 +47,17 @@ public class LoginController extends HttpServlet {
 			MemberVo result = new MemberService().login(vo);
 			if(result != null) {
 				System.out.println("로그인 성공");
-			request.getSession().setAttribute("lgnss", result);
+				request.getSession().setAttribute("lgnss", result);
 			} else {
 				System.out.println("로그인 실패");				
 			}
+			//3. 페이지이동 및 데이터전달 ( 셋중 하나로 메소드 꼭 끝냄)
+			//3-1 response.sendRedirect(request.getContextPath()+"url"); //데이터없이 페이지만 이동
+			//3-2 request.setAttribute("name1", "값"); //데이터 전달과 페이지 이동
+			//3-2 request.getRequestDispatcher("xxx.jsp).forward(request, response);
+			//3-3 out.println(값); out.flush(); out.close();   //에이작스 방식
+			
 			response.sendRedirect(request.getContextPath()+"/");
-			//3.
 	}
 	
 	

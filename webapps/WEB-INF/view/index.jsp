@@ -13,14 +13,16 @@
 	<jsp:include page="/WEB-INF/view/header.jsp"/>
 
 	<c:if test="${not empty lgnss }">
-	<button class="btn myinfo">내정보보</button>	
+	<button class="btn myinfo">내정보보기</button>	
 	</c:if>
 	
 	
 	<script>
+	$(".btn.myinfo").on("click", handlerClickBtnMyinfo);
 	$(".btn.login").on("click", handlerClickBtnLogin);
 	$(".btn.logout").on("click", handlerClickBtnLogout);
-	$(".btn.myinfo").on("click", handlerClickBtnMyinfo);
+	
+	
 	function handlerClickBtnMyinfo(){
 		console.log("btnMyinfo 버튼 눌림");
 		location.href="<%=request.getContextPath()%>/myinfo";
@@ -31,7 +33,8 @@
 		location.href="<%=request.getContextPath()%>/login";
 	}
 	function handlerClickBtnLogout(){
-		console.log("btnLogout 버튼 눌림");		
+		console.log("btnLogout 버튼 눌림");	
+		location.href="<%=request.getContextPath()%>/logout";
 	}
 			
 	</script>
