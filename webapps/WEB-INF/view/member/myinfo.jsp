@@ -39,6 +39,9 @@
 			pw : <%=vo.getPasswd() %>
 			<br>
 			name : <%=vo.getName() %>
+			<br>
+			이전페이지
+			<a href="<%=request.getContextPath()%>/login">로그인페이지이동</a>
 
 </body>
 </html>
