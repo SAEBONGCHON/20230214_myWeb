@@ -3,6 +3,20 @@ package kh.board.model.vo;
 import java.sql.Date;
 
 public class BoardVo {
+//board         
+//			----------------------- -------- -------------- 
+//			BOARD_NUM               NOT NULL NUMBER         
+//			BOARD_TITLE                      VARCHAR2(50)   
+//			BOARD_WRITER                     VARCHAR2(15)   
+//			BOARD_CONTENT                    VARCHAR2(2000) 
+//			BOARD_ORIGINAL_FILENAME          VARCHAR2(100)  
+//			BOARD_RENAME_FILENAME            VARCHAR2(100)  
+//			BOARD_DATE                       DATE           
+//			BOARD_LEVEL                      NUMBER         
+//			BOARD_REF                         NUMBER         
+//			BOARD_REPLY_SEQ                  NUMBER         
+//			BOARD_READCOUNT                  NUMBER   
+	
 	private int boardNum;
 	private String boardTitle;
 	private String boardWriter;
