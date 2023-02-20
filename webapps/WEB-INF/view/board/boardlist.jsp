@@ -39,9 +39,16 @@
 	    
 	    
 	    <c:forEach begin="${ startPageNum}" end="${ endPageNum}" step="1" var="page">
-		    <c:if test="${page == currentPage}">
-		    <span><b>&nbsp;&nbsp;${page }&nbsp;&nbsp;</b></span>
-		    </c:if>
+		    <c:choose>
+		    	<c:when test="${page == currentPage}">
+				 	<span><b>&nbsp;&nbsp;${page }&nbsp;&nbsp;</b></span>
+		    	</c:when>
+		    	<c:otherwise>
+		    		<span><a href="<%=request.getContenxPath()%>
+		    		/?aaa=${page}">&nbsp;&nbsp;${page }&nbsp;&nbsp;</a></span>
+		    	</c:otherwise>
+		    </c:choose>
+		
 	    </c:forEach>
 	    <c:if test="${ endPageNum < pagaCnt}">
 	    	<span>&nbsp;&nbsp;다음&nbsp;&nbsp;</span>  
