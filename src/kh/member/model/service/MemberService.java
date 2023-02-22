@@ -11,6 +11,7 @@ public class MemberService {
 	public int dupIdChk(String id) {
 		Connection conn = getConnection();
 		int result = new MemberDao().dupIdChk(conn, id);
+		close(conn);
 		return result;
 	}
 	

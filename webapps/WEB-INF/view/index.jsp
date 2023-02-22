@@ -30,16 +30,16 @@
 	
 	function handlerClickBtnMyinfo(){
 		console.log("btnMyinfo 버튼 눌림");
-		location.href="<%=request.getContextPath()%>/myinfo";
+		location.href="<%=request.getContextPath()%>/myinfo"
 	}
 	
 	function handlerClickBtnLogin(){
 		console.log("btnLogin 버튼 눌림");		
-		location.href="<%=request.getContextPath()%>/login";
+		location.href="<%=request.getContextPath()%>/login"
 	}
 	function handlerClickBtnLogout(){
 		console.log("btnLogout 버튼 눌림");	
-		location.href="<%=request.getContextPath()%>/logout";
+		location.href="<%=request.getContextPath()%>/logout"
 	}
 			
 	</script>
