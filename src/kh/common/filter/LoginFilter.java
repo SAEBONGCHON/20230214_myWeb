@@ -10,8 +10,8 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.annotation.WebFilter;
 
-@WebFilter("/private/*")
-public class EncodingFilter implements Filter{
+@WebFilter("/loginfilter")
+public class LoginFilter implements Filter{
 
 	@Override
 	public void destroy() {
